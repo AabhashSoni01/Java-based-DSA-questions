@@ -6,12 +6,12 @@ public class Que5 {
     // Move all negative numbers to beginning and positive to end
 
     public static void main(String[] args) {
-        System.out.print("size of array : ");
         Scanner sc = new Scanner(System.in);
+        System.out.print("size of array : ");
         int size = sc.nextInt();
         int[] arr = new int[size];
 
-        System.out.println("array elements : "); // only 0s, 1s and 2s
+        System.out.println("array elements : ");
         for (int i = 0; i < arr.length; i++) {
             arr[i] = sc.nextInt();
         }
@@ -45,9 +45,9 @@ public class Que5 {
         }
 
         // Print result
-        System.out.print("Rearranged array: ");
+        System.out.println("Rearranged array: ");
         for (int num : merged) {
-            System.out.print(num + " ");
+            System.out.println(num);
         }
     }
 }

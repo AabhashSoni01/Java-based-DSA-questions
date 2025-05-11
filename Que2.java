@@ -6,8 +6,11 @@ public class Que2 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        System.out.print("size of array : ");
         int size = sc.nextInt();
         int[] arr = new int[size];
+
+        System.out.println("array elements : ");
         for (int i = 0; i < size; i++) {
             arr[i] = sc.nextInt();
         }
@@ -24,8 +27,9 @@ public class Que2 {
         }
 
         // prints reversed array
+        System.out.println("reversed array : ");
         for (int num : arr) {
-            System.out.print(num + " ");
+            System.out.println(num);
         }
     }
 }

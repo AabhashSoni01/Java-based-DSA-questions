@@ -5,14 +5,21 @@ public class Que4 {
     // Sort an array of 0s, 1s and 2s (Dutch National Flag Problem)
 
     public static void main(String[] args) {
-        System.out.print("size of array : ");
         Scanner sc = new Scanner(System.in);
+        System.out.print("size of array : ");
         int size = sc.nextInt();
         int[] arr = new int[size];
 
-        System.out.println("array elements : "); // only 0s, 1s and 2s
+        System.out.println("array elements (only 0s, 1s and 2s) : ");
         for (int i = 0; i < arr.length; i++) {
             arr[i] = sc.nextInt();
+
+            // input validation
+            if (arr[i] < 0 || arr[i] > 2) {
+                System.out.println("Invalid input! Only 0, 1, and 2 are allowed.");
+                sc.close();
+                return;
+            }
         }
         sc.close();
 
@@ -37,8 +44,9 @@ public class Que4 {
         }
 
         // sorted array
+        System.out.println("Sorted array: ");
         for (int num : arr) {
-            System.out.print(num + " ");
+            System.out.println(num);
         }
     }
 }

@@ -1,12 +1,28 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Que3 {
 
     // Find the 'Kth' max and min element of an array
 
+    static String getOrdinalSuffix(int k) {
+        if (k % 100 >= 11 && k % 100 <= 13)
+            return "th";
+        switch (k % 10) {
+            case 1:
+                return "st";
+            case 2:
+                return "nd";
+            case 3:
+                return "rd";
+            default:
+                return "th";
+        }
+    }
+
     public static void main(String[] args) {
-        System.out.print("size of array : ");
         Scanner sc = new Scanner(System.in);
+        System.out.print("size of array : ");
         int size = sc.nextInt();
         int[] arr = new int[size];
 
@@ -16,28 +32,23 @@ public class Que3 {
         }
 
         // for Kth max and min element
+        System.out.print("the value of k : ");
         int k = sc.nextInt();
         sc.close();
 
-        if (k <= 0 || k > arr.length) {
+        if (k <= 0 || k > size) {
             System.out.println("Invalid value of k.");
             return;
         }
 
         // sorts the array
-        for (int i = 0; i < arr.length - 1; i++) {
-            for (int j = 0; j < arr.length - 1 - i; j++) {
-                if (arr[j] > arr[j + 1]) {
-                    int temp = arr[j];
-                    arr[j] = arr[j + 1];
-                    arr[j + 1] = temp;
-                }
-            }
-        }
+        Arrays.sort(arr);
 
         int kthMin = arr[k - 1];
         int kthMax = arr[arr.length - k];
 
-        System.out.println(k + "th max element : " + kthMax + k + "th min element : " + kthMin);
+        System.out.println(k + getOrdinalSuffix(k) + " minimum element: " + kthMin);
+        System.out.println(k + getOrdinalSuffix(k) + " maximum element: " + kthMax);
+
     }
 }
