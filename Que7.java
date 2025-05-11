@@ -10,6 +10,7 @@ public class Que7 {
         for (int i = 0; i < size; i++) {
             arr[i] = sc.nextInt();
         }
+        sc.close();
         // Cyclic Rotation by One (Right Shift)
         int temp = arr[arr.length - 1];
         for (int i = arr.length - 1; i > 0; i--) {
