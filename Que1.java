@@ -24,6 +24,6 @@ public class Que1 {
                 max = arr[i];
         }
 
-        System.out.print("max element : " + max + " minimum element : " + min);
+        System.out.print("maximum element : " + max + "\nminimum element : " + min);
     }
 }
