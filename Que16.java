@@ -1,10 +1,8 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Que16 {
-    
+public class Que16 {     
     // Find duplicate number in array
-
     public static void main(String[] args) {
         System.out.print("size of array : ");
         Scanner sc = new Scanner(System.in);
