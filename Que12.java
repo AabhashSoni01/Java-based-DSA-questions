@@ -15,7 +15,7 @@ public class Que12 {
             arr[i] = sc.nextInt();
         }
 
-        System.out.print("element, whose occurance is to be count : ");
+        System.out.print("element, whose occurance is to be counted : ");
         int element = sc.nextInt();
         sc.close();
 
