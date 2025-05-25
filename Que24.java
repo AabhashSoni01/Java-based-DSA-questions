@@ -29,7 +29,7 @@ public class Que24 {
         System.out.print("enter a string : ");
         String str = sc.nextLine();
         sc.close();
-        
+        System.out.println("All permutation of the string : ");
         permute(str, 0, str.length() - 1);
     }
 }
