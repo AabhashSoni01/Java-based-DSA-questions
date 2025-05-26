@@ -1,9 +1,8 @@
 import java.util.Scanner;
 
 public class Que25 {
-
     // Check if two strings are anagrams
-
+    
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter first string : ");
@@ -34,5 +33,4 @@ public class Que25 {
         }
         System.out.println("strings are anagrams !");
     }
-
 }
