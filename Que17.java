@@ -5,7 +5,7 @@ public class Que17 {
     // Find intersection of two sorted arrays
 
     public static void main(String[] args) {
-        System.out.print("size of array : ");
+        System.out.print("size of array1 : ");
         Scanner sc = new Scanner(System.in);
         int size1 = sc.nextInt();
         int[] arr1 = new int[size1];
