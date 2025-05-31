@@ -23,9 +23,9 @@ public class Que22 {
         }
 
         if (isPalindrome) {
-            System.out.println("string is a palindrom\n");
+            System.out.println("string is a palindrome\n");
         } else {
-            System.out.println("string is not a palindrom\n");
+            System.out.println("string is not a palindrome\n");
         }
     }
 }
