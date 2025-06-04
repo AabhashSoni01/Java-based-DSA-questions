@@ -25,17 +25,20 @@ public class Que31 {
         }
         return index;
     }
-}
 
-public static void main(String[] args) {
-    System.out.println("Enter characters :");
-    Scanner sc = new Scanner(System.in);
-    String s = sc.nextLine();
-    char[] chars = s.toCharArray();
-    int newLength = compress(chars);
-    System.out.print("Compressed: ");
-    for (int i = 0; i < newLength; i++) {
-        System.out.print(chars[i]);
+    public static void main(String[] args) {
+        System.out.println("Enter characters :");
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        sc.close();
+
+        char[] chars = s.toCharArray();
+        int newLength = compress(chars);
+
+        System.out.print("Compressed: ");
+        for (int i = 0; i < newLength; i++) {
+            System.out.print(chars[i]);
+        }
+        System.out.println("\nLength: " + newLength);
     }
-    System.out.println("\nLength: " + newLength);
 }
