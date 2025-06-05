@@ -11,7 +11,7 @@ public class Que32 {
             char currentChar = str.charAt(end);
 
             while (set.contains(currentChar)) {
-                set.remove(currentChar);
+                set.remove(str.charAt(start));
                 start++;
             }
             set.add(currentChar);
