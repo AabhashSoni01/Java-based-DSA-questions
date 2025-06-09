@@ -1,21 +1,18 @@
 import java.util.*;
 
 public class Que31 {
+    // Compress the string (like Leetcode 443)
     public static int compress(char[] chars) {
         int index = 0;
         int i = 0;
-
         while (i < chars.length) {
             char currentChar = chars[i];
             int count = 0;
-
             while (i < chars.length && chars[i] == currentChar) {
                 i++;
                 count++;
             }
-
             chars[index++] = currentChar;
-
             if (count > 1) {
                 String str = Integer.toString(count);
                 for (char ch : str.toCharArray()) {
@@ -31,10 +28,8 @@ public class Que31 {
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();
         sc.close();
-
         char[] chars = s.toCharArray();
         int newLength = compress(chars);
-
         System.out.print("Compressed: ");
         for (int i = 0; i < newLength; i++) {
             System.out.print(chars[i]);
