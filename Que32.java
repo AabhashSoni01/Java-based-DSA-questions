@@ -28,7 +28,6 @@ public class Que32 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the string : ");
-        sc.nextLine(); // consume the leftover newline
         String str = sc.nextLine();
         sc.close();
         String result = Longestubstring(str);
