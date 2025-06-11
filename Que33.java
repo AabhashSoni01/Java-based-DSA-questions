@@ -21,7 +21,7 @@ public class Que33 {
         for (String word : strs) {
             char[] chars = word.toCharArray(); // Convert to char array
             Arrays.sort(chars); // then sort
-            String sortedWord = new String(chars); // Convert back to strin
+            String sortedWord = new String(chars); // Convert back to string
             if (!map.containsKey(sortedWord)) {
                 map.put(sortedWord, new ArrayList<>()); // If sortedWord not in map, add to map
             }
