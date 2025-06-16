@@ -34,7 +34,7 @@ public class Que38 {
         boolean found = false;
         while (r < rows && c >= 0) {
             if (matrix[r][c] == element) {
-                System.out.println("Element " + element + " found at [" + (r + 1) + ", " + (c + 1));
+                System.out.println("Element " + element + " found at [" + (r + 1) + ", " + (c + 1) + "]");
                 found = true;
                 break;
             } else if (matrix[r][c] > element) {
