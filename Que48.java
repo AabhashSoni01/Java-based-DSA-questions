@@ -3,18 +3,6 @@ import java.util.*;
 public class Que48 {
     // Find median in a row-wise sorted matrix
 
-    private static int countLessEqual(int[] row, int target) {
-        int low = 0, high = row.length;
-        while (low < high) {
-            int mid = (low + high) / 2;
-            if (row[mid] <= target)
-                low = mid + 1;
-            else
-                high = mid;
-        }
-        return low; // 'low' is the number of elements <= target
-    }
-
     public static int median(int[][] matrix) {
         int r = matrix.length, c = matrix[0].length;
         int min = Integer.MAX_VALUE, max = Integer.MIN_VALUE;
@@ -33,13 +21,25 @@ public class Que48 {
             }
 
             if (p < target) {
-                mid = mid + 1;
+                min = mid + 1;
             } else {
                 max = mid;
             }
         }
 
         return min;
+    }
+
+    private static int countLessEqual(int[] row, int target) {
+        int low = 0, high = row.length;
+        while (low < high) {
+            int mid = (low + high) / 2;
+            if (row[mid] <= target)
+                low = mid + 1;
+            else
+                high = mid;
+        }
+        return low; // 'low' is the number of elements <= target
     }
 
     public static void main(String[] args) {
@@ -56,8 +56,6 @@ public class Que48 {
                 matrix[i][j] = sc.nextInt();
             }
         }
-        System.out.println("Matrix input complete.");
-
         sc.close();
         System.out.println("Median: " + median(matrix));
     }
