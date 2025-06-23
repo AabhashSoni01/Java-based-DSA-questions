@@ -19,6 +19,28 @@ public class Que50 {
             }
         }
         sc.close();
+
+        System.out.println("Orignal matrix : ");
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+        boolean zeroInFirstRow = false, zeroInFirstCol = false;
+
+        for (int i = 0; i < rows; i++) {
+            if (matrix[i][0] == 0) {
+                zeroInFirstCol = true;
+            }
+        }
+
+        for (int j = 0; j < cols; j++) {
+            if (matrix[0][j] == 0) {
+                zeroInFirstRow = true;
+            }
+        }
     }
 
 }
